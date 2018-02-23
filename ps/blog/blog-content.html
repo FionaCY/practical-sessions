@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>blog</title>
+  <style type="text/css">
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.bg-div{
+    background: url('./img/bg.jpg') center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.blog-info {
+  width: 10%;
+  height: 85%;
+  margin-top:3%;
+  border-right: 2px solid #fff;
+  padding-left: 3%;
+  float: left;
+}
+.user-avater{
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+.blog-content {
+  width:70%;
+  height:100%;
+  float: left;
+  margin-left: 5%; 
+}
+.blog-title {
+  width: 100%;
+  height:60px;
+  font-size: 20px;
+  border-bottom: 1px solid #fff;
+  line-height: 60px;
+  color:#fff;
+  text-align: center;
+}
+.blog-article {
+  width: 100%;
+  height:80%;
+  margin-top:10px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #eee;
+}
+</style>
+</head>
+<body>
+<div class="bg-div">
+  <div class="blog-info">
+    <img class="user-avater" src="https://raw.githubusercontent.com/MrQingchun/lpy-nodejs/master/public/img/user-4.png"/>
+  </div>
+  <div class="blog-content">
+    <div class="blog-title">随想</div>
+    <div class="blog-article">“我们在全球竞争的大背景下要增强紧迫感，进一步深化‘放管服’改革，持续优化我国的营商环境!”这是李克强总理在今年4月一次常务会议上对各地方、各部门提出的明确要求。
+　　事实上，在这之前有一个省份早已动了起来。他们通过对全省各市县开展“放管服”改革和创业创新环境评价，对标世界银行发布的“企业营商环境指标”，进一步改善和优化全省的营商投资环境。
+　　今年2月起，江苏省借鉴世界银行《企业营商环境评价》标准，在去年对8市20县(市、区)开展试评价的基础上，对全省13个设区市、96个县(市、区)开展2016年度“放管服”改革和创业创新环境评价。
+　　对于江苏省的此项改革探索，李克强总理近日作出重要批示：“有比较就能看出存在的不足。今年‘放管服’改革要瞄准问题所在着力攻坚，各地各部门都要这样做。”
+　　“我们要以全球营商环境最好的地区为标杆，具体、量化地呈现各地的改革成效。”江苏省一位负责人说。
+　　该负责人介绍，在参照世界银行对全球各地的营商环境评价体系基础上，江苏省围绕改革要求、立足省情实际，以“企业申请开办时间压缩了多少”、“投资项目审批提速了多少”、“群众办事方便了多少”等量化指标为重点，制定了20项内容、45项评价指标的“江苏版”评价体系。
+　　他说，本次评价委托第三方机构采集数据，把与国际经济体“对标评分”和省内各地“比较评分”相结合。“这意味着‘江苏版’评价体系向世界银行看齐，不降低评价标准。”
+　　从天津市“封存109枚公章”，到广东省缩短“万里审批图”，可以说，本届中央政府扭住不放、持续深化的“放管服”改革，已经在全国各地掀起一场优化营商环境、为市场“清障搭台”的新浪潮。
+　　在世界银行发布的《全球营商环境报告》中，中国排名逐年前移，2017年比2014年累计上升了18位。与此相对应的另一组数据是，2016年全国新设企业552.8万户，同比增长24.5%，日均新设企业1.51万户，新增市场主体继续呈“井喷式”增长。
+　　而江苏省正在大力推进的“对标世界银行”改革举措，正是这场变革的一个最新缩影。当地有关负责人透露，评价结束后，全省将针对发现的差距和问题作出部署，推动更多市县简化审批、优化市场环境，从而通过评价形成改革“倒逼机制”。</div>
+  </div>
+</div>
+<script type="text/javascript" src="./jquery-1.11.2.min.js"></script>
+<script>
+var urlinfo=window.location.href;
+var urllen = urlinfo.length;
+var subindex = urlinfo.indexOf('=')+1;
+var indexVal = parseInt(urlinfo.substring(subindex,urllen))+1;
+console.log(indexVal);
+var innerLi = '';
+$('.blog-content').html('');
+console.log(localStorage.getItem('title1'));
+if(localStorage.getItem('title'+indexVal)!=null){
+  innerLi = innerLi + '<div class="blog-title">'+localStorage.getItem('title'+indexVal)+'</div><div class="blog-article">'+localStorage.getItem('context'+indexVal)+'</div></div>';
+}
+$('.blog-content').html(innerLi);
+</script>  
+</body>
+</html>

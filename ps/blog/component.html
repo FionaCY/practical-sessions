@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>blog</title>
+  <style type="text/css">
+  	html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.bg-div{
+    background: url('./img/bg.jpg') center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.main-img {
+	width: 100%;
+	height: 150px;
+	margin-top:12%;
+	text-align: center;
+}
+.user-avater {
+	border-radius:50%;
+	border:4px solid #fff;
+}
+.main-item {
+	width: 100%;
+	height: 150px;
+	margin-top:40px;
+	text-align: center;
+	padding-left:15%;
+	padding-right:15%;
+}
+.button-intro {
+	position:absolute;
+	z-index: 1;
+	float:left;
+}
+.button-avater {
+	width:100px;
+	height: 100px;
+	border-radius:50%;
+	border:4px solid #fff;
+}
+.component-intro {
+	position:absolute;
+	float:left;	
+	margin-left:25%;
+}
+.component-avater {
+	width:100px;
+	height: 100px;
+	border-radius:50%;
+	border:4px solid #fff;
+}
+
+.button-intro:hover {
+	background: #000;
+	opacity: 0.5;
+	position: absolute;
+	z-index: 1;
+	border-radius:50%;
+}
+.button-intro-word {
+	position: absolute;
+	z-index: 103;
+	border-radius:50%;
+	float:left;
+	color:#fff;
+	font-size: 16px;
+	margin-top:-60px;
+	text-align: center;
+	margin-left: 22px;
+	display: none;
+}
+
+.component-intro:hover {
+	background: #000;
+	opacity: 0.5;
+	position: absolute;
+	z-index: 100;
+	border-radius:50%;
+}
+
+.component-intro-word {
+	position: absolute;
+	z-index: 103;
+	border-radius:50%;
+	float:left;
+	color:#fff;
+	font-size: 14px;
+	margin-top:-66px;
+	text-align: center;
+	display: none;
+}
+.progress-intro {
+	position:absolute;
+	float:left;	
+	margin-left:50%;	
+}
+.progress-avater {
+	width:100px;
+	height: 100px;
+	border-radius:50%;
+	border:4px solid #fff;
+}
+.progress-intro-word {
+	position: absolute;
+	z-index: 103;
+	border-radius:50%;
+	float:left;
+	color:#fff;
+	font-size: 14px;
+	margin-top:-66px;
+	text-align: center;
+	display: none;
+}
+.progress-intro:hover {
+	background: #000;
+	opacity: 0.5;
+	position: absolute;
+	z-index: 100;
+	border-radius:50%;
+}
+.visual-intro {
+	position:absolute;
+	float:left;	
+	margin-left:75%;	
+}
+.visual-avater {
+	width:100px;
+	height: 100px;
+	border-radius:50%;
+	border:4px solid #fff;
+}
+.visual-intro-word {
+	position: absolute;
+	z-index: 103;
+	border-radius:50%;
+	float:left;
+	color:#fff;
+	font-size: 14px;
+	margin-top:-66px;
+	text-align: center;
+	display: none;
+}
+.visual-intro:hover {
+	background: #000;
+	opacity: 0.5;
+	position: absolute;
+	z-index: 100;
+	border-radius:50%;
+}
+</style>
+
+</head>
+<body>
+<div class="bg-div">
+<div class="main-img">
+	<img class="user-avater" src="./img/xiaoxin.jpg">
+</div>
+<div class="main-item">
+<div class="button-intro">
+	<img class="button-avater" src="./img/button.png">
+	<div class="button-intro-word">button</div>
+</div>
+<div class="component-intro">
+	<img class="component-avater" src="./img/picture.jpg">
+	<div class="component-intro-word">picture-gallery</div>
+</div>
+<div class="progress-intro">
+	<img class="progress-avater" src="./img/progress.jpg">
+	<div class="progress-intro-word">Progress-bar</div>
+</div>
+<div class="visual-intro">
+	<img class="visual-avater" src="./img/visula.jpg">
+	<div class="visual-intro-word">Echarts</div>
+</div>
+</div>	
+</div>
+<script type="text/javascript" src="./jquery-1.11.2.min.js"></script>
+<script>
+$('.button-intro').click(function(){
+	window.location.href='add-blog.html';
+});
+$('.component-intro').click(function(){
+	window.location.href='../effect/interwin/index.html';
+});
+$('.progress-intro').click(function(){
+	window.location.href='../effect/percent/index.html';
+});
+$('.visual-intro').click(function(){
+	window.location.href='../effect/visual/index.html';
+});
+$('.button-intro').hover(function(){
+	$('.button-intro-word').show();
+},function(){
+    $('.button-intro-word').hide();
+});
+$('.component-intro').hover(function(){
+	$('.component-intro-word').show();
+},function(){
+    $('.component-intro-word').hide();
+});
+$('.progress-intro').hover(function(){
+	$('.progress-intro-word').show();
+},function(){
+    $('.progress-intro-word').hide();
+});
+$('.visual-intro').hover(function(){
+	$('.visual-intro-word').show();
+},function(){
+    $('.visual-intro-word').hide();
+});
+</script>
+</body>
+</html>
